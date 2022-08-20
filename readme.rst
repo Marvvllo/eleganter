@@ -14,7 +14,7 @@ Eleganter was made to showcase the skills we have learned throughout our journey
 E L E G A N T E R S
 ###################
 
-Made by a small team of students,
+Made by a small team of hard-working and dilligent students,
   
   Ali Husin
 
