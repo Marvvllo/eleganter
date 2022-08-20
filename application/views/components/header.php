@@ -37,7 +37,8 @@
 
 <body>
   <main class="bg-gray-dark min-h-screen">
-    <nav class="flex sticky items-center top-0 inset-x-0 z-50 w-full justify-between px-8 bg-gradient-to-r from-primary to-secondary text-white text-xl py-2">
+
+    <nav class="flex sticky items-center top-0 inset-x-0 z-50 w-full justify-between px-8 bg-gradient-to-r from-primary to-secondary text-white text-xl font-display py-2">
       <div class="flex space-x-8 text-center font-semibold">
         <img class="block max-h-10" src="<?= base_url('assets/images/logo.svg') ?>">
         <a class="block py-2 rounded-sm transition-all duration-100 border-solid border-white hover:border-b-2" href="<?= base_url() ?>">
