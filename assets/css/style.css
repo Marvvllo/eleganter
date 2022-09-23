@@ -591,11 +591,11 @@ video {
   background-color: rgb(53 93 183 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -609,7 +609,7 @@ video {
 
 .btn-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(121 154 227 / var(--tw-bg-opacity));
+  background-color: rgb(162 179 221 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(53 93 183 / var(--tw-text-opacity));
 }
@@ -619,11 +619,11 @@ video {
   background-color: transparent;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -706,10 +706,6 @@ video {
   grid-template-columns: 1.25fr 1fr;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .items-center {
   align-items: center;
 }
@@ -730,6 +726,11 @@ video {
   border-width: 1px;
 }
 
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(121 154 227 / var(--tw-bg-opacity));
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -738,10 +739,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
 }
 
 .font-display {
@@ -828,6 +825,31 @@ video {
   z-index: -1;
   /* Send element to back                   */
   background-color: #355DB7;
+}
+
+.navbar {
+  z-index: 999;
+}
+
+.navbar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* Position the pseudo-element absolutely */
+  height: 0.25em;
+  /* Set height and width as desired        */
+  width: 100%;
+  top: 0;
+  left: 0;
+  left: right;
+  z-index: -10;
+  /* Send element to back                   */
+  background-color: #355DB7;
+  transition: height 0.3s ease 0s;
+}
+
+.navbar:hover::before {
+  height: 100%;
 }
 
 .nav-link {

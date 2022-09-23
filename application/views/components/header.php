@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+  <link rel="shortcut icon" href="<?= base_url('assets/images/logo_square.svg') ?>" type="image/x-icon">
   <title>Eleganter</title>
 </head>
 
 <body>
 
-  <header class="text-accent sticky top-0 inset-x-0">
+  <header class="navbar text-accent sticky top-0 inset-x-0">
     <nav class="flex justify-between items-center px-8">
 
       <a href="<?= base_url() ?>" class="py-2">

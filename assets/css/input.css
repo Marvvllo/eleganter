@@ -2,11 +2,11 @@
 @tailwind components;
 
 .btn-primary {
-	@apply bg-primary hover:bg-secondary hover:text-primary transition-colors ease-in-out duration-300 py-2 px-4 text-white text-xl text-center font-display font-bold rounded-full;
+	@apply bg-primary hover:bg-accent hover:text-primary transition-colors ease-in-out duration-300 py-2 px-8 text-white text-lg text-center font-display font-bold rounded-full;
 }
 
 .btn-secondary {
-	@apply bg-transparent hover:bg-secondary hover:text-white ring-2 ring-secondary transition-colors ease-in-out duration-300 py-2 px-4 text-secondary text-xl text-center font-display font-bold rounded-full;
+	@apply bg-transparent hover:bg-secondary hover:text-white ring-2 ring-secondary transition-colors ease-in-out duration-300 py-2 px-8 text-secondary text-lg text-center font-display font-bold rounded-full;
 }
 
 @tailwind utilities;
@@ -34,6 +34,28 @@
 	background-color: theme("colors.primary");
 }
 
+.navbar {
+	z-index: 999;
+}
+
+.navbar::before {
+	content: "";
+	display: block;
+	position: absolute; /* Position the pseudo-element absolutely */
+	height: 0.25em; /* Set height and width as desired        */
+	width: 100%;
+	top: 0;
+	left: 0;
+	left: right;
+	z-index: -10; /* Send element to back                   */
+	background-color: theme("colors.primary");
+	transition: height 0.3s ease 0s;
+}
+
+.navbar:hover::before {
+	height: 100%;
+}
+
 .nav-link {
 	position: relative;
 }
@@ -50,6 +72,7 @@
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 }
+
 .nav-link:hover:after {
 	width: 100%;
 	left: 0;
