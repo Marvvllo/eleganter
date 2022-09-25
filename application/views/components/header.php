@@ -16,7 +16,7 @@
 
 <body>
 
-  <header class="navbar text-accent fixed top-0 inset-x-0">
+  <header class="navbar text-accent sticky top-0 inset-x-0">
     <nav class="flex justify-between items-center px-8">
 
       <a href="<?= base_url() ?>" class="py-2">
@@ -24,9 +24,9 @@
       </a>
 
       <ul class="flex uppercase gap-16 mr-8 font-display font-medium text-sm">
-        <li><a href="#" class="nav-link py-2">Home</a></li>
-        <li><a href="#" class="nav-link py-2">Tools</a></li>
-        <li><a href="#" class="nav-link py-2">About us</a></li>
+        <li><a href="<?= base_url() ?>" class="nav-link py-2">Home</a></li>
+        <li><a href="<?= base_url() ?>" class="nav-link py-2">Tools</a></li>
+        <li><a href="<?= base_url() ?>" class="nav-link py-2">About us</a></li>
       </ul>
 
     </nav>

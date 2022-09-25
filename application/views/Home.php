@@ -1,7 +1,7 @@
 <main class="h-[400vh]">
 
   <!-- Hero section -->
-  <section class="">
+  <section class="-mt-11">
     <div class="grid grid-cols-hero items-center px-8 py-2 bg-primary">
 
       <!-- Headings -->
