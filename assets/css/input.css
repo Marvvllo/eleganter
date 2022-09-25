@@ -22,18 +22,6 @@
 	background-size: 100%;
 }
 
-.hero::before {
-	content: "";
-	position: absolute; /* Position the pseudo-element absolutely */
-	height: 35%; /* Set height and width as desired        */
-	width: 100%;
-	top: 0;
-	left: 0;
-	left: right;
-	z-index: -1; /* Send element to back                   */
-	background-color: theme("colors.primary");
-}
-
 .navbar {
 	z-index: 999;
 }
@@ -41,13 +29,13 @@
 .navbar::before {
 	content: "";
 	display: block;
-	position: absolute; /* Position the pseudo-element absolutely */
-	height: 0.25em; /* Set height and width as desired        */
+	position: absolute;
+	height: 0.25em;
 	width: 100%;
 	top: 0;
 	left: 0;
 	left: right;
-	z-index: -10; /* Send element to back                   */
+	z-index: -10;
 	background-color: theme("colors.primary");
 	transition: height 0.3s ease 0s;
 }

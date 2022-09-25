@@ -647,8 +647,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -661,13 +669,22 @@ video {
   right: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .top-0 {
   top: 0px;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mr-8 {
@@ -694,12 +711,16 @@ video {
   height: 400vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .max-h-8 {
   max-height: 2rem;
 }
 
-.w-full {
-  width: 100%;
+.w-auto {
+  width: auto;
 }
 
 .grid-cols-hero {
@@ -726,9 +747,23 @@ video {
   border-width: 1px;
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 93 183 / var(--tw-bg-opacity));
+}
+
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(162 179 221 / var(--tw-bg-opacity));
+}
+
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(121 154 227 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-8 {
@@ -739,6 +774,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .font-display {
@@ -812,21 +852,6 @@ video {
   background-size: 100%;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  /* Position the pseudo-element absolutely */
-  height: 35%;
-  /* Set height and width as desired        */
-  width: 100%;
-  top: 0;
-  left: 0;
-  left: right;
-  z-index: -1;
-  /* Send element to back                   */
-  background-color: #355DB7;
-}
-
 .navbar {
   z-index: 999;
 }
@@ -835,15 +860,12 @@ video {
   content: "";
   display: block;
   position: absolute;
-  /* Position the pseudo-element absolutely */
   height: 0.25em;
-  /* Set height and width as desired        */
   width: 100%;
   top: 0;
   left: 0;
   left: right;
   z-index: -10;
-  /* Send element to back                   */
   background-color: #355DB7;
   transition: height 0.3s ease 0s;
 }
