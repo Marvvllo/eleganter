@@ -8,6 +8,7 @@ module.exports = {
 				primary: "#355DB7",
 				secondary: "#799AE3",
 				accent: "#A2B3DD",
+				dark: "#1D201F",
 			},
 			fontFamily: {
 				display: ['"Raleway"', "sans-serif"],
@@ -16,6 +17,7 @@ module.exports = {
 			gridTemplateColumns: {
 				// Grid for hero section
 				'hero': '1.25fr 1fr',
+				'about': '1fr 2fr'
 			}
 		},
 	},
