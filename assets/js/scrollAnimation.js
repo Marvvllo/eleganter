@@ -57,7 +57,7 @@ if (scrollSlideRights) {
   })
 }
 
-// Slide down on scroll
+// About us slide down on scroll
 const scrollSlideDowns = document.querySelectorAll('.scroll-slide-down')
 
 if (scrollSlideDowns) {
@@ -66,7 +66,7 @@ if (scrollSlideDowns) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: scrollSlideDown,
-        start: "top center",
+        start: "top-=50 center",
         end: "bottom center",
         scrub: true,
         // markers: true,
@@ -110,6 +110,31 @@ if (scrollFades) {
   })
 }
 
+// Slide right on scroll
+const galleries = document.querySelectorAll('.gallery')
+
+if (galleries) {
+  galleries.forEach((gallery, i) => {
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: gallery,
+        start: "top-=150 center",
+        end: "bottom center",
+        scrub: true,
+        // markers: true,
+        toggleActions: "play reverse play reverse",
+        ease: Power4.easeInOut
+      }
+    });
+
+    tl
+      .from(gallery, { xPercent: -25, opacity: 0 })
+      .to(gallery, { xPercent: 0, opacity: 1 })
+      ;
+  })
+}
+
 // CTA Buttons slide up on scroll
 const scrollSlideUps = document.querySelectorAll('.scroll-slide-up')
 
@@ -120,7 +145,7 @@ if (scrollSlideUps) {
       scrollTrigger: {
         trigger: scrollSlideUp,
         start: "top center",
-        end: "bottom+=100 center",
+        end: "bottom+=150 center",
         scrub: true,
         // markers: true,
         toggleActions: "play reverse play reverse",

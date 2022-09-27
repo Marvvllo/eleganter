@@ -37,7 +37,12 @@
     <!-- Texts -->
     <div class="flex flex-col justify-center self-end gap-2 pr-16 h-1/2 scroll-slide-down">
       <h2 class="font-display text-5xl font-bold leading-[1.15em] text-gradient">About us</h2>
-      <p class="text-lg">Eleganter is a website designed and developed to give you a comfortable and out-of-the-box experience right in your home.</p>
+      <p class="text-base">
+        Eleganter is a diligent group of students aiming to ease and simplify the furnishing proccess of your home.
+      </p>
+      <p class="text-base">
+        Made to complete said goals, Eleganter is the perfect place to find elegant and out-of-the-box designs aswell as beautiful combinations of colors.
+      </p>
     </div>
 
   </section>
@@ -51,7 +56,7 @@
     </div>
 
     <!-- Cards Container -->
-    <div class="grid grid-cols-3 gap-8 shrink-0 scroll-slide-right">
+    <div class="grid grid-cols-3 gap-8 shrink-0 gallery">
 
       <div class="about flex flex-row gap-4 items-center text-white">
         <!-- Gallery Image -->
