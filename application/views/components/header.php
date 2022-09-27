@@ -9,6 +9,11 @@
   <!-- Fonts import -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script src="<?= base_url('assets/js/scrollAnimation.js') ?>" defer></script>
+
   <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
   <link rel="shortcut icon" href="<?= base_url('assets/images/logo_square.svg') ?>" type="image/x-icon">
   <title>Eleganter</title>
