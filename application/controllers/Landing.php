@@ -16,4 +16,11 @@ class Landing extends CI_Controller
     $this->load->view('Home');
     $this->load->view('components/Footer');
   }
+
+  public function login()
+  {
+    $this->load->view('components/Header');
+    // $this->load->view('Home');
+    $this->load->view('components/Footer');
+  }
 }

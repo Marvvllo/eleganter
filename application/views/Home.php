@@ -21,8 +21,8 @@
 
     <!-- Action Buttons -->
     <div class="flex gap-4 mx-8 my-4 slide-down scroll-slide-up">
-      <a class="btn-primary" href="#">Find Elegance</a>
-      <a class="btn-secondary" href="#">Explore Tools</a>
+      <a class="btn-primary" href="<?= base_url() ?>">Learn More</a>
+      <a class="btn-secondary" href="<?= base_url("catalog") ?>">Explore Tools</a>
     </div>
   </section>
 
