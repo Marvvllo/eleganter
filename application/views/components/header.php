@@ -31,7 +31,6 @@
       <ul class="flex uppercase gap-16 mr-8 font-display font-medium text-sm">
         <li><a href="<?= base_url() ?>" class="nav-link py-2">Home</a></li>
         <li><a href="<?= base_url("catalog") ?>" class="nav-link py-2">Catalog</a></li>
-        <li><a href="<?= base_url("landing/login") ?>" class="nav-link py-2">Login</a></li>
       </ul>
 
     </nav>

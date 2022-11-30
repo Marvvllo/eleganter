@@ -15,6 +15,11 @@ class Kategori_model extends CI_Model
     return [
 
       [
+        "field" => "id",
+        "label" => "ID Kategori",
+        "rules" => "required"
+      ],
+      [
         "field" => "nama",
         "label" => "Nama Kategori",
         "rules" => "required"
@@ -42,7 +47,7 @@ class Kategori_model extends CI_Model
   public function save()
   {
     $post = $this->input->post();
-    $this->nama_siswa = $post["kategori"];
+    $this->nama = $post["kategori"];
     $this->jk = $post["status"];
 
     return $this->db->insert($this->_table, $this);
@@ -52,7 +57,7 @@ class Kategori_model extends CI_Model
   {
     $post = $this->input->post();
     $this->nis = $post["kategori_id"];
-    $this->nama_siswa = $post["kategori"];
+    $this->nama = $post["kategori"];
     $this->jk = $post["status"];
 
     return $this->db->update($this->_table, $this, array('kategori_id' => $post["kategori_id"]));
