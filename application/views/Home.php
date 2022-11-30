@@ -2,7 +2,7 @@
 
   <!-- Hero section -->
   <section class="-mt-11">
-    <div class="grid grid-cols-hero items-center px-8 py-2 bg-primary">
+    <div class="grid grid-cols-hero items-center px-8 bg-primary">
 
       <!-- Headings -->
       <div class="slide-right">
@@ -15,7 +15,7 @@
 
       <!-- Hero Image -->
       <div class="slide-down translate-y-1/2">
-        <img class="h-full w-auto" src="<?= base_url('assets/images/hero-couch.png') ?>" alt="">
+        <img class="h-auto w-full" src="<?= base_url('assets/images/hero-couch.png') ?>" alt="">
       </div>
     </div>
 
