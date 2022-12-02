@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Supplier_model extends CI_Model
 {
 
-  private $_table = "kategori";
+  private $_table = "supplier";
 
   public $id;
   public $nama;
@@ -34,9 +34,9 @@ class Supplier_model extends CI_Model
     return $this->db->get($this->_table)->result();
   }
 
-  public function getById($kategori_id)
+  public function getById($id)
   {
-    return $this->db->get_where($this->_table, ['kategori_id' => $kategori_id])->row();
+    return $this->db->get_where($this->_table, ['id' => $id])->row();
   }
 
   public function save()
