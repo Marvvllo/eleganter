@@ -17,8 +17,11 @@ module.exports = {
 			gridTemplateColumns: {
 				// Grid for hero section
 				'hero': '1.25fr 1fr',
-				'about': '1fr 2fr'
-			}
+				'about': '1fr 2fr',
+			},
+			transitionProperty: {
+				'width': 'width'
+			},
 		},
 	},
 };

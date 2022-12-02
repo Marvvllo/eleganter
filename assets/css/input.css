@@ -86,3 +86,8 @@
 	z-index: -1;
 	position: absolute;
 }
+
+#table_data tbody tr {
+	padding: 10px;
+	border-bottom: 8px solid #5b3a3a;
+}
