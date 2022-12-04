@@ -27,7 +27,9 @@
       <div class="flex flex-col justify-between h-full">
 
         <menu class="flex flex-col items-center gap-8">
-          <img class="w-12" src="<?= base_url('assets/images/logo_square.svg') ?>">
+          <a href="<?= base_url() ?>">
+            <img class="w-12" src="<?= base_url('assets/images/logo_square.svg') ?>">
+          </a>
           <li class="flex flex-row justify-center items-center gap-2 group">
             <a href="<?= base_url('/dashboard') ?>">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-auto text-accent hover:text-white">
@@ -53,7 +55,7 @@
         </menu>
 
         <div class="flex flex-col items-center">
-          <a class="mt-auto ">
+          <a href="<?= base_url('auth/logout') ?>" class="mt-auto ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-auto text-accent">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>

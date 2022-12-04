@@ -71,6 +71,6 @@ class Auth extends CI_Controller
   {
     // hapus session logout
     $this->session->unset_userdata('admin');
-    redirect('/');
+    redirect(base_url());
   }
 }

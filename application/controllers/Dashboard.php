@@ -8,6 +8,11 @@ class Dashboard extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+
+    if ($this->session->userdata('admin') == null) {
+      redirect(base_url('auth'));
+    }
+
     $this->load->model("kategori_model");
     $this->load->model("barang_model");
     $this->load->model("supplier_model");
