@@ -21,7 +21,7 @@
 
 <body>
 
-  <header class="navbar text-accent sticky top-0 inset-x-0">
+  <header class="navbar text-white sticky top-0 inset-x-0">
     <nav class="flex justify-between items-center px-8">
 
       <a href="<?= base_url() ?>" class="py-2">
