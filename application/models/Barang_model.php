@@ -6,13 +6,12 @@ class Barang_model extends CI_Model
 
   private $_table = "barang";
 
-  public $id;
-  public $kategori_id;
-  public $supplier_id;
-  public $nama;
-  public $spesifikasi;
+  public $id_barang;
+  public $id_kategori;
+  public $nama_barang;
   public $harga;
-  public $stok;
+  public $spesifikasi;
+  public $gambar;
   public $status;
 
   public function rules()
@@ -20,26 +19,19 @@ class Barang_model extends CI_Model
     return [
 
       [
-        "field" => "kategori_id",
-        "label" => "Kategori",
+        "field" => "id_barang",
+        "label" => "ID Barang",
+        "rules" => "required"
+      ],
+      [
+        "field" => "id_kategori",
+        "label" => "ID Kategori",
         "rules" => "required"
       ],
 
       [
-        "field" => "supplier_id",
-        "label" => "Supplier",
-        "rules" => "required"
-      ],
-
-      [
-        "field" => "nama",
+        "field" => "nama_barang",
         "label" => "Nama Barang",
-        "rules" => "required"
-      ],
-
-      [
-        "field" => "spesifikasi",
-        "label" => "Spesifikasi Barang",
         "rules" => "required"
       ],
 
@@ -50,8 +42,14 @@ class Barang_model extends CI_Model
       ],
 
       [
-        "field" => "stok",
-        "label" => "Stok Barang",
+        "field" => "spesifikasi",
+        "label" => "Spesifikasi Barang",
+        "rules" => "required"
+      ],
+
+      [
+        "field" => "gambar",
+        "label" => "Gambar Barang",
         "rules" => "required"
       ],
 
@@ -68,19 +66,26 @@ class Barang_model extends CI_Model
 
   public function getAll()
   {
-    return $this->db->get($this->_table)->result();
+    // return $this->db->get($this->_table)->result();
+    $this->db->join('kategori k', 'k.kategori_id = b.id_kategori');
+    return $this->db->get('barang b')->result();
   }
 
-  public function getById($kategori_id)
+  public function getById($id_barang)
   {
-    return $this->db->get_where($this->_table, ['kategori_id' => $kategori_id])->row();
+    return $this->db->get_where($this->_table, ['id_barang' => $id_barang])->row();
   }
 
   public function save()
   {
     $post = $this->input->post();
-    $this->nama_siswa = $post["kategori"];
-    $this->jk = $post["status"];
+    $this->id_barang = $post["id_barang"];
+    $this->id_kategori = $post["id_kategori"];
+    $this->nama_barang = $post["nama_barang"];
+    $this->harga = $post["harga"];
+    $this->spesifikasi = $post["spesifikasi"];
+    $this->gambar = $post["gambar"];
+    $this->status = $post["status"];
 
     return $this->db->insert($this->_table, $this);
   }
@@ -88,15 +93,19 @@ class Barang_model extends CI_Model
   public function update()
   {
     $post = $this->input->post();
-    $this->nis = $post["kategori_id"];
-    $this->nama_siswa = $post["kategori"];
-    $this->jk = $post["status"];
+    $this->id_barang = $post["id_barang"];
+    $this->id_kategori = $post["id_kategori"];
+    $this->nama_barang = $post["nama_barang"];
+    $this->harga = $post["harga"];
+    $this->spesifikasi = $post["spesifikasi"];
+    $this->gambar = $post["gambar"];
+    $this->status = $post["status"];
 
-    return $this->db->update($this->_table, $this, array('kategori_id' => $post["kategori_id"]));
+    return $this->db->update($this->_table, $this, array('id_barang' => $post["id_barang"]));
   }
 
-  public function delete($kategori_id)
+  public function destroy($id_barang)
   {
-    return $this->db->delete($this->_table, array('kategori_id' => $kategori_id));
+    return $this->db->delete($this->_table, array('id_barang' => $id_barang));
   }
 }

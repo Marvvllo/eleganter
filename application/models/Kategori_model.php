@@ -6,8 +6,8 @@ class Kategori_model extends CI_Model
 
   private $_table = "kategori";
 
-  public $id;
-  public $nama;
+  public $kategori_id;
+  public $kategori;
   public $status;
 
   public function rules()
@@ -15,13 +15,13 @@ class Kategori_model extends CI_Model
     return [
 
       [
-        "field" => "id",
+        "field" => "kategori_id",
         "label" => "ID Kategori",
         "rules" => "required"
       ],
       [
-        "field" => "nama",
-        "label" => "Nama Kategori",
+        "field" => "kategori",
+        "label" => "Kategori",
         "rules" => "required"
       ],
 
@@ -47,8 +47,9 @@ class Kategori_model extends CI_Model
   public function save()
   {
     $post = $this->input->post();
-    $this->nama = $post["kategori"];
-    $this->jk = $post["status"];
+    $this->kategori_id = $post["kategori_id"];
+    $this->kategori = $post["kategori"];
+    $this->status = $post["status"];
 
     return $this->db->insert($this->_table, $this);
   }
@@ -56,14 +57,14 @@ class Kategori_model extends CI_Model
   public function update()
   {
     $post = $this->input->post();
-    $this->nis = $post["kategori_id"];
-    $this->nama = $post["kategori"];
-    $this->jk = $post["status"];
+    $this->kategori_id = $post["kategori_id"];
+    $this->kategori = $post["kategori"];
+    $this->status = $post["status"];
 
     return $this->db->update($this->_table, $this, array('kategori_id' => $post["kategori_id"]));
   }
 
-  public function delete($kategori_id)
+  public function destroy($kategori_id)
   {
     return $this->db->delete($this->_table, array('kategori_id' => $kategori_id));
   }

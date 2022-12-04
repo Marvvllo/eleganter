@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2022 at 09:07 AM
+-- Generation Time: Dec 04, 2022 at 11:41 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'admin@gmail.com', '$2y$10$8Ui1PjKRKHEOf10hmVbdRueNfx8yictITiL4YqZwkA3uvxk0mYIHS');
 
 -- --------------------------------------------------------
 
@@ -64,6 +64,7 @@ CREATE TABLE `barang` (
   `id_barang` int(11) NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `nama_barang` varchar(300) NOT NULL,
+  `harga` varchar(50) NOT NULL,
   `spesifikasi` text NOT NULL,
   `gambar` varchar(300) NOT NULL,
   `status` enum('on','off') NOT NULL
@@ -73,8 +74,8 @@ CREATE TABLE `barang` (
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `spesifikasi`, `gambar`, `status`) VALUES
-(2, 1, 'Classic Faux Grasscloth Wallpaper', 'Dark green textured peel and stick wallpaper designed by Society Social', '91eMsohRLuL._AC_SL1500_.jpg', 'on');
+INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `spesifikasi`, `gambar`, `status`) VALUES
+(1, 1, 'Meja Makan', '150000', 'Baru', 'test', 'on');
 
 -- --------------------------------------------------------
 
@@ -93,8 +94,8 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`kategori_id`, `kategori`, `status`) VALUES
-(1, 'Wallpaper', 'on'),
-(2, 'Furniture', 'on');
+(1, 'Tables', 'on'),
+(2, 'Cabinets', 'on');
 
 --
 -- Indexes for dumped tables
@@ -145,23 +146,13 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `barang`
---
-ALTER TABLE `barang`
-  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`kategori_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
