@@ -23,10 +23,12 @@
               <div class="form-group">
                 <label for="email">Username</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" autocomplete="off">
+                <?php echo form_error('email') ?>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="off">
+                <?php echo form_error('password') ?>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
