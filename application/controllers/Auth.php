@@ -53,9 +53,9 @@ class Auth extends CI_Controller
         $this->session->set_userdata($data);
         redirect('dashboard');
       }
-      // kalo password salah
+      // kalo salah
       else {
-        $this->session->set_flashdata('error', 'Password Salah');
+        $this->session->set_flashdata('error', 'Email atau Password Salah');
         redirect('auth');
       }
     }
